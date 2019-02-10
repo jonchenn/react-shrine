@@ -57,7 +57,8 @@
     "start-dev": "node scripts/start.js",
     "start": "node scripts/build.js && node server.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "local": "yarn build && firebase serve --only hosting"
   },
   "jest": {
     "collectCoverageFrom": [

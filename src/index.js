@@ -86,7 +86,6 @@ if ('serviceWorker' in navigator) {
 // Init GA, generates pageview when history changes.
 ReactGA.initialize('UA-134252237-1');
 
-const history = createHistory()
 history.listen((location, action) => {
   ReactGA.set({ page: location.pathname });
   ReactGA.pageview(location.pathname);
