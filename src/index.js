@@ -83,6 +83,11 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Init GA
+// Init GA, generates pageview when history changes.
 ReactGA.initialize('UA-134252237-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+
+const history = createHistory()
+history.listen((location, action) => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
