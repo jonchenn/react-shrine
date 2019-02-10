@@ -3,3 +3,6 @@
 node_modules
 *.bak
 build
+.firebase/
+.firebaserc
+firebase-debug.log

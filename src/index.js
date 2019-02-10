@@ -23,7 +23,8 @@ import store, { history } from './store';
 import 'typeface-roboto';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+
+// import registerServiceWorker from './registerServiceWorker';
 
 const theme = createMuiTheme({
   palette: {
@@ -70,4 +71,13 @@ ReactDOM.render((
     </ConnectedRouter>
   </Provider>
 ), document.getElementById('root'));
-registerServiceWorker();
+
+// registerServiceWorker();
+
+// Check that service workers are registered
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}

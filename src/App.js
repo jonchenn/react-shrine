@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import asyncComponent from './components/AsyncComponent';
 import './App.css';
