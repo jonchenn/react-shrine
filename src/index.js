@@ -17,6 +17,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import cyan from 'material-ui/colors/cyan';
+import ReactGA from 'react-ga';
 
 import ScrollToTop from './components/ScrollToTop';
 import store, { history } from './store';
@@ -81,3 +82,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
+
+// Init GA
+ReactGA.initialize('UA-134252237-1');
+ReactGA.pageview(window.location.pathname + window.location.search);

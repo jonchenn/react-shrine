@@ -8,8 +8,11 @@
   <meta name="description" content="Online shopping site">
   <link rel="manifest" href="https://jonchen-shrine.firebaseapp.com/manifest.json">
   <link rel="shortcut icon" href="https://jonchen-shrine.firebaseapp.com/favicon.ico">
+
   <title>Shrine</title>
   <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
   <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
   <link rel="preload" as="script" href="https://jonchen-shrine.firebaseapp.com/static/js/main.0fb16b88.js">
   <link rel="preload" as="style" href="https://jonchen-shrine.firebaseapp.com/static/css/main.99a464ea.css">
@@ -129,6 +132,19 @@
       </div>
     </div>
   </div>
+
+  <amp-analytics type="gtag" data-credentials="include">
+    <script type="application/json">
+      {
+        "vars" : {
+          "gtag_id": "UA-134252237-1",
+          "config" : {
+            "UA-134252237-1": { "groups": "default" }
+          }
+        }
+      }
+    </script>
+  </amp-analytics>
 </body>
 
 </html>
