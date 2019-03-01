@@ -6,3 +6,4 @@ build
 .firebase/
 .firebaserc
 firebase-debug.log
+public/google*.html
