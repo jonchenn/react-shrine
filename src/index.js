@@ -87,7 +87,6 @@ if ('serviceWorker' in navigator) {
 ReactGA.initialize('UA-76366633-5');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-// history.listen((location, action) => {
-//   ReactGA.set({ page: location.pathname });
-//   ReactGA.pageview(location.pathname);
-// });
+history.listen((location, action) => {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+});
